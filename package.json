@@ -1,0 +1,20 @@
+{
+  "name": "delivops-app",
+  "version": "1.0.0",
+  "description": "Application web pour le transport messagerie",
+  "main": "index.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delivops-app/delivops-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/delivops-app/delivops-app/issues"
+  },
+  "homepage": "https://github.com/delivops-app/delivops-app#readme"
+}
