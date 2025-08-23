@@ -130,3 +130,41 @@ Il permet d’exécuter du JavaScript en dehors du navigateur et sert de base po
    ```
 
    → doit afficher `API DELIVOPS OK`.
+
+## Note
+
+### Différence entre `package.json` et `package-lock.json`
+
+Le fichier **`package.json`** décrit le projet et liste les dépendances principales (par exemple Express).
+Le fichier **`package-lock.json`** enregistre la version exacte de chaque dépendance et sous-dépendance installée.
+Cela garantit que tous les développeurs du projet réinstallent **exactement le même environnement**.
+Les deux fichiers doivent être conservés et versionnés dans le repository.
+
+
+### Utilisation de Nodemon
+
+**Nodemon** est un outil qui relance automatiquement le serveur Node.js à chaque modification des fichiers du projet.
+Il est utilisé uniquement en développement pour éviter de redémarrer le serveur manuellement après chaque changement.
+
+* Installation :
+
+  ```bash
+  npm install --save-dev nodemon
+  ```
+
+* Script dans `package.json` :
+
+  ```json
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  }
+  ```
+
+* Commande de lancement :
+
+  ```bash
+  npm run dev
+  ```
+
+En production, on utilise `npm start` (sans Nodemon).
